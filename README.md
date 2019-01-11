@@ -1,0 +1,1 @@
+# IdleChampions-AHK-Scripts
