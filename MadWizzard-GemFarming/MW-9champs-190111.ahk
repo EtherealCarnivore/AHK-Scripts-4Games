@@ -750,7 +750,7 @@ DoLevel(nLevel_Number)
 
 	;Remove click damage familiar temporarily to gain more gold
 	;Level Birdsong to extra attack
-	if (nLevel_Number = 9)
+	if (nLevel_Number = 13)
 	{
 		PlaceFamiliar(7)
 		champ_number := 9
@@ -758,11 +758,13 @@ DoLevel(nLevel_Number)
 		nY := gRosterButton.Y
 		champ_button := gRosterButton.Clone()
 		champ_button.X := nX
-		Loop, 4
+		Loop, 10
 		{
 			ClickPixel(champ_button)
 			Sleep, 10
 		}
+		Sleep, 200
+		DoSpecial(9) ; choose specialization for birdsong
 	}
 
 	;Level Hitch halfway to extra attacks
@@ -1062,7 +1064,7 @@ LevelUp(champ_number, num_clicks := 1)
 	while (!bGreyCheck and ctr < num_clicks)
 	{
 		ClickPixel(champ_button)
-		sleep, 100
+		sleep, 20
 
 		bGreyCheck := CheckGreyPixel(champ_button)
 		ctr := ctr + 1
@@ -1078,7 +1080,7 @@ LevelUp(champ_number, num_clicks := 1)
 		}
 		else
 		{
-			sleep, 100
+			sleep, 20
 		}
 	}
 
@@ -1104,7 +1106,7 @@ LevelUp(champ_number, num_clicks := 1)
 		{
 			DoSpecial(champ_number)
 		}
-		sleep, 100
+		sleep, 20
 	}
 	Return
 }
