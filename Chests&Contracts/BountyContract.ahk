@@ -22,13 +22,13 @@ global useContractX = 590 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY
 global useCotractY = 488 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global counter = 0
 
-^t::                                                ;CTRL+T to copy XY coordinates & color (0xBBGGRR) to clipboard
+^t::
 {
 
     while(numberOfContracts > counter){
       MouseMove, xLocation, Ylocation,
       Sleep, 10
-      ;MouseMove, contractScrollX, contractScrollY,
+
 
       MouseClick,
       sleep, 300
