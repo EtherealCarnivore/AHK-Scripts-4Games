@@ -12,15 +12,14 @@ GuiClose:
 ButtonOK:
 Gui, Submit
 
-
-global xLocation = 763 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global Ylocation = 414 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global contractScrollX = 736 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global contractScrollY = 434 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global xLocation = 595 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global Ylocation = 507 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global contractScrollX = 594 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global contractScrollY = 440 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global scrollX = 791 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global scrollY = 440 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global useContractX = 605 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global useCotractY = 487 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global useContractX = 590 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global useCotractY = 488 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global counter = 0
 
 ^t::                                                ;CTRL+T to copy XY coordinates & color (0xBBGGRR) to clipboard
@@ -28,20 +27,20 @@ global counter = 0
 
     while(numberOfContracts > counter){
       MouseMove, xLocation, Ylocation,
-      Sleep, 300
-      MouseMove, contractScrollX, contractScrollY,
-      Sleep, 300
+      Sleep, 10
+      ;MouseMove, contractScrollX, contractScrollY,
+
       MouseClick,
       sleep, 300
-      Loop, 2 {
-        MouseClick, WheelDown, %scrollX%, %scrollY%
-        Sleep, 50
+      Loop, 14 {
+        MouseClick, WheelDown, scrollX, scrollY
+        Sleep, 10
       }
-      Sleep, 350
+      Sleep, 10
       MouseMove, useContractX, useCotractY
-      sleep, 350
+      sleep, 10
       MouseClick
-      sleep, 350
+      sleep, 10
       counter++
 
     }

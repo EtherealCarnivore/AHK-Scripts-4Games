@@ -19,12 +19,13 @@ Gui, Submit
 {
  while(chestsToBuy > counter){
    MouseMove, chestLocationX, chestLocationY
+   sleep, 50
+   MouseClick
+   sleep, 50
+   MouseMove, buyX, buyY	
    sleep, 400
    MouseClick
-   sleep, 400
-   MouseMove, buyX, buyY
-   sleep, 400
-   MouseClick
+Sleep, 2000
    counter++
  }
 }
