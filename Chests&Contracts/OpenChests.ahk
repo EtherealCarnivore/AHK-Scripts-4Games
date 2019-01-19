@@ -11,7 +11,7 @@ Gui, Submit
 
 global counter = 0
 ^Space::		;this is the space every 10 miliseconds
-while counter > vchestsToOpen	;this is loops until the counter isn't bigger than the chests to open
+while counter < vchestsToOpen	;this is loops until the counter isn't bigger than the chests to open
 {
 send {space}
 sleep 10 ; RAPID FIRE OPENING, change sleep to see what you are getting
