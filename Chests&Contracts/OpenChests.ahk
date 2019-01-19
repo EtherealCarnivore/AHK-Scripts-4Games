@@ -1,4 +1,26 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+; works with silver and gold chests
+Gui, Add, text, , Enter number of chests to open #:
+Gui, Add, Edit, vchestsToOpen
+Gui, Add, Button, default, OK
+Gui, Show
+Return
+
+GuiClose:
+ButtonOK:
+Gui, Submit
+
+global counter = 0
+^Space::		;this is the space every 10 miliseconds
+while counter > vchestsToOpen	;this is loops until the counter isn't bigger than the chests to open
+{
+send {space}
+sleep 10 ; RAPID FIRE OPENING, change sleep to see what you are getting
+counter++ ; increment counter to use compare operator
+}
+return		;ends the hotkey
+
+`::
+{
+	Pause, , 1
+	return
+}
