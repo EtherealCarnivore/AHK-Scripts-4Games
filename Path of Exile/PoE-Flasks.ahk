@@ -15,11 +15,11 @@ global bridgeX = 1071 ;location of the bridge
 global bridgeY = 446
 
 
-; use flask 1-5 -- this is for my MF Windripper as spamming flasks as annoying
+; use flask 1-5 -- this is for my MF Windripper as spamming flasks is SUPER annoying
 SPACE::
 {
 Send {1}{2}{3}{4}{5}
-Sleep 1000,
+Sleep 1000
 return
 }
 
