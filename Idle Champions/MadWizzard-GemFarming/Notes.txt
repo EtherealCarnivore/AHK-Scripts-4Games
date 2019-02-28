@@ -1,0 +1,27 @@
+!!! IMPORTANT !!!
+Search for (use CTRL+F) 	if !cycle_RunCount
+Change 'run "C:\Program Files (x86)\Steam\SteamApps\common\IdleChampions\IdleDragons.exe"' to the location of your game installation
+
+
+;Additional Notes:
+;	on levels : 			1,6,11,... Click Damage is Maxed
+;	boss levels	: 			no special functions added at this time
+;	remaining even levels :	will attempt to level up even numbered champs 5 levels at time and assign Specializations as needed
+;	remaining odd levels :	will attempt to level up odd numbered champs 5 levels at time and assign Specializations as needed
+;	special levels :
+;							1...waits for  initial Gold Collection and then Levels Deekin up to L100 to ensure Confidence in the Boss is unlocked and Maxs Click DMG
+;							14,64,..(orb levels) all the Ults will be triggered
+
+;WARNINGS/Potential Issues/Recommendations
+;Potential Issue: 	Having Title Bar turned off will create a shift in the Y values and Scrit wont be able find several Locations (Jadisero)
+;Warning:			May need to Enable Hide Completed/Lock options on the Adventure Select Window (code scrolls list to top and expects Mad Wizard option to be visible)
+;Warning:			Pausing Script while on Boss Level will throw off the Level Counter
+;					(while script should still work may run an extra level and Leveling Champs/ClickDmg will be out of sync for that run)
+;Recommended:		Pause Script prior to opening in game windows (store/high rollers/etc)
+
+
+;Specialization Section in the MW_Settings_1366x768.ahk or MW_Settings_1280x720.ahk file
+;Champ1_SpecialOptionQ := [NUMBER]
+;number is the 1-N for which Specialization the script is to select for the ChampNumber
+;Q is the assoicated formation Q/W/E
+;use -1 as the SpecialOption to prevent this Champ from Leveling Up/being added
