@@ -1,16 +1,17 @@
-global skill4X = 1608
+;The X/Y values will only work for 1920x1080p
+global skill4X = 1608 ;4th skill
 global skill4Y = 1054
-global thunderX = 1435
+global thunderX = 1435 ;lightning golem
 global thunderY = 714
-global flameX = 1507
+global flameX = 1507 ;flame golem
 global flameY = 631
-global portX = 16
+global portX = 16 ;blue icon for party member
 global portY = 255
-global clickPX = 1129
+global clickPX = 1129 ;click port to party member
 global clickPY = 559
-global newX = 476
+global newX = 476 ;location of the "New" instance
 global newY = 341
-global bridgeX = 1071
+global bridgeX = 1071 ;location of the bridge
 global bridgeY = 446
 
 
