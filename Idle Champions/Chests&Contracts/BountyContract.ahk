@@ -11,13 +11,12 @@ Return
 GuiClose:
 ButtonOK:
 Gui, Submit
-
-global xLocation = 595 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global Ylocation = 507 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global contractScrollX = 594 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global xLocation = 608 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global Ylocation = 502 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global contractScrollX = 615, ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global contractScrollY = 440 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global scrollX = 791 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
-global scrollY = 440 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global scrollX = 781 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
+global scrollY = 445 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global useContractX = 590 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global useCotractY = 488 ; THESE LOCATIONS CHANGE DEPENING ON WHERE YOUR BOUNTY CONTRACTS ARE LOCATED
 global counter = 0
@@ -27,20 +26,23 @@ global counter = 0
 
     while(numberOfContracts > counter){
       MouseMove, xLocation, Ylocation,
-      Sleep, 10
+      Sleep, 200
 
 
       MouseClick,
       sleep, 300
-      Loop, 14 {
+      Loop, 25 {
         MouseClick, WheelDown, scrollX, scrollY
         Sleep, 10
       }
-      Sleep, 10
+      Sleep, 200
       MouseMove, useContractX, useCotractY
-      sleep, 10
+      sleep, 300
       MouseClick
-      sleep, 10
+      sleep, 500
+      MouseMove, xLocation, Ylocation,
+      Sleep, 350
+      sleep, 6500
       counter++
 
     }
