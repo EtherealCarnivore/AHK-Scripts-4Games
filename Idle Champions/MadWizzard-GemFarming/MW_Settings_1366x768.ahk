@@ -34,7 +34,7 @@ global town_x2		:= 800
 global town_y2		:= 275
 
 ;gSwordCoastProgress := 3 -- waterdeep and longsaddle unlocked
-global town_x3		:= 795
+global town_x3		:= 745
 global town_y3		:= 500
 
 global select_win_x 	:= 1085				; red pixel for the Close Button on the Adventure Select window
